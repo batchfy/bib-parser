@@ -1,0 +1,39 @@
+{
+  "name": "bib-parser",
+  "version": "1.0.0",
+  "description": "A fully-typed TypeScript BibTeX parser and serializer, ported from ORCID/bibtexParseJs",
+  "license": "MIT",
+  "author": "Batchfy LLC <batchfy@gmail.com>",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "keywords": [
+    "bibtex",
+    "parser",
+    "typescript",
+    "bibliography",
+    "latex"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test",
+    "test:watch": "node --test --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,0 +1,55 @@
+% ---------------------------------------------------------------------------
+% Example BibTeX library used by the test suite.
+%
+% It deliberately exercises the full grammar in a single file:
+%   - % comment lines (like this one) must be ignored
+%   - @preamble / @comment blocks
+%   - @string macro definitions (quoted, braced, numeric, concatenated, chained)
+%   - macro references inside entry fields
+%   - quoted, braced, nested-brace, numeric and month values
+%   - # string concatenation
+%   - multiple authors, an entry with no citation key, and a trailing comma
+%   - stray text between entries
+% ---------------------------------------------------------------------------
+
+@preamble{ "\newcommand{\noopsort}[1]{}" }
+
+@string{ acm = "ACM Press" }
+@string{ ieee = {IEEE Computer Society} }
+@string{ y2020 = 2020 }
+@string{ jacm = "Journal of the " # acm }
+
+Some stray text between entries that the parser must skip over.
+
+@article{muehe2010,
+    author  = {Muehe, Henrik},
+    title   = {A {BibTeX} Parser in {JavaScript}},
+    journal = jacm,
+    year    = y2020,
+    month   = jan,
+    publisher = acm,
+    note    = "Ported to {TypeScript}"
+}
+
+@book{knuth1997,
+    author    = {Knuth, Donald E.},
+    title     = {The Art of Computer Programming},
+    publisher = {Addison-Wesley},
+    year      = 1997,
+    volume    = 1
+}
+
+@inproceedings{lysenko2013,
+    author    = {Lysenko, Mikola and Bailey, Nick},
+    title     = {CommonJS Ports and Pretty Printing},
+    booktitle = "Proceedings of the " # ieee,
+    year      = 2013,
+}
+
+@misc{,
+    author = {Lovelace, Ada},
+    title  = {Notes on the Analytical Engine},
+    year   = 1843
+}
+
+@comment{ This entire block is a free-form comment. }
