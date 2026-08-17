@@ -1,4 +1,4 @@
-# bib-parser
+# @batchfy/bib-parser
 
 A small, **fully-typed TypeScript** BibTeX parser, serializer, and `@string`
 macro expander. It is a modern port of
@@ -15,6 +15,12 @@ a thorough test suite.
 ## Installation
 
 ```bash
+npm install @batchfy/bib-parser
+```
+
+Or, to build from source:
+
+```bash
 npm install
 npm run build   # emits ./dist (JS + .d.ts)
 ```
@@ -25,7 +31,7 @@ natively via type stripping).
 ## Quick start
 
 ```ts
-import { parse, toBibtex } from "bib-parser";
+import { parse, toBibtex } from "@batchfy/bib-parser";
 
 const entries = parse("@article{muehe2010, title = {A Parser}, year = 2010}");
 // [{ entryType: "article", citationKey: "muehe2010",
