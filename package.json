@@ -1,6 +1,6 @@
 {
   "name": "@batchfy/bib-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fully-typed TypeScript BibTeX parser and serializer, ported from ORCID/bibtexParseJs",
   "license": "MIT",
   "author": "Batchfy LLC <batchfy@gmail.com>",
