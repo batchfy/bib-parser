@@ -1,5 +1,5 @@
 /**
- * bib-parser — a fully-typed TypeScript BibTeX parser and serializer.
+ * bib-parser (`@batchfy/bib-parser`) — a fully-typed TypeScript BibTeX parser and serializer.
  *
  * Ported from the original JavaScript library
  * {@link https://github.com/ORCID/bibtexParseJs ORCID/bibtexParseJs}
@@ -7,7 +7,7 @@
  *
  * @example
  * ```ts
- * import { parse, toBibtex } from "bib-parser";
+ * import { parse, toBibtex } from "@batchfy/bib-parser";
  *
  * const entries = parse("@article{key, title = {Hello}, year = 2020}");
  * const bib = toBibtex(entries, { compact: false });
